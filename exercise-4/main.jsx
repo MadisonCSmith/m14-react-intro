@@ -50,12 +50,20 @@ var EmployeeSearch = React.createClass({
     getInitialState:function() {
         return({searchString:''});
     },
-    // Add a filter funciton
+
+    // Add a filter function
+    valueOfEvent: function () {
+        //get value of the event(event.target.value)
+        this.setState({searchString:event.target.value});
+    } 
 
     render:function() {
         var employees = this.props.data;
 
         // Use this.state.searchString to filter down the `employees` array
+        for (i = 0; i < employees.length; i++) {
+            this.state.searchString
+        }
 
         return(
             <div>
